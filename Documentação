@@ -1,0 +1,10 @@
+Precisei adicionar duas variáveis de ambiente:
+
+nome: ANDROID_SDK_ROOT
+valor: C:\Users\Eduardo\AppData\Local\Android\Sdk
+
+nome: Path
+valor: C:\Users\Eduardo\AppData\Local\Android\Sdk\platform-tools
+
+Precisei instalar o plugin do Vscode: Android IOS Emulator
+OBS: talvez não fosse necessário
