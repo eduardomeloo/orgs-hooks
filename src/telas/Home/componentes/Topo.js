@@ -1,11 +1,13 @@
 import React from "react";
 import { Text, View, Image, StyleSheet } from "react-native";
 import logo from '../../../assets/logo.png'
+import topo from "../../../mocks/topo";
+
 export default function Topo() {
     return  <View style={estilos.topo} >
                 <Image source={logo} style={estilos.imagem} />
-                <Text style={estilos.boasVindas} >Olá Eduardo</Text>
-                <Text style={estilos.legenda} >Encontre os melhores produtores</Text>
+                <Text style={estilos.boasVindas} >{topo.boasVindas}</Text>
+                <Text style={estilos.legenda} >{topo.legenda}</Text>
             </View>
 }
 
