@@ -5,10 +5,17 @@ import { carregaTopo } from "../../../servicos/carregaDados";
 
 class Topo extends React.Component {
 
-atualizaTopo() {
-    const retorno = carregaTopo()
-    console.log(retorno)
-}
+    state ={
+        topo: {
+            boasVindas: '',
+            legenda: ''
+        }
+    }
+
+    atualizaTopo() {
+        const retorno = carregaTopo()
+        this.setState({ topo: retorno })
+    }
 
     componentDidMount() {
         this.atualizaTopo()
@@ -16,8 +23,8 @@ atualizaTopo() {
     render() {
         return  <View style={estilos.topo} >
                     <Image source={logo} style={estilos.imagem} />
-                    <Text style={estilos.boasVindas} >teste5</Text>
-                    <Text style={estilos.legenda} >teste </Text>
+                    <Text style={estilos.boasVindas} >{this.state.topo.boasVindas}</Text>
+                    <Text style={estilos.legenda} >{this.state.topo.legenda}</Text>
                 </View>
     }
 }
